@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:shadowColor="@color/colorshadow"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:text="التقارير"
+            android:textColor="@color/text02"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/textstyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:text="اليوم"
+            android:textColor="@color/text02"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@id/textView5"
+            app:layout_constraintEnd_toStartOf="@id/textView5"
+            app:layout_constraintTop_toTopOf="@id/textView5"
+            android:background="@drawable/polygon_1" />
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/textstyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="الخميس, 26 ماي 2023"
+            android:textColor="@color/text02"
+            app:layout_constraintEnd_toEndOf="@id/textView5"
+            app:layout_constraintTop_toBottomOf="@id/textView5" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView8"
+            android:background="@drawable/rectangle_100" />
+
+        <com.github.guilhe.views.CircularProgressView
+            android:id="@+id/circularProgressView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="@id/imageView14"
+            app:layout_constraintLeft_toLeftOf="@id/imageView14"
+            app:layout_constraintRight_toLeftOf="@id/textView12"
+            app:layout_constraintTop_toTopOf="@id/imageView14"
+            app:progress="50"
+            app:progressBarColor="@color/color5"
+            app:progressBarThickness="10dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/textStyleBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="36dp"
+            android:text="50%"
+            app:layout_constraintEnd_toEndOf="@id/imageView14"
+            app:layout_constraintTop_toTopOf="@id/imageView14"
+            tools:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/textstyle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:text="منخفض"
+            android:textColor="@color/text02"
+            app:layout_constraintEnd_toStartOf="@id/textView11"
+            app:layout_constraintTop_toTopOf="@id/textView11" />
+
+        <TextView
+            android:id="@+id/textView13"
+            style="@style/textstyle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_105"
+            android:text="30%"
+            app:layout_constraintEnd_toEndOf="@id/textView11"
+            app:layout_constraintTop_toBottomOf="@id/textView11" />
+
+        <TextView
+            android:id="@+id/textView14"
+            style="@style/textstyle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:text="معتدل"
+            android:textColor="@color/text02"
+            app:layout_constraintEnd_toStartOf="@id/textView13"
+            app:layout_constraintTop_toTopOf="@id/textView13" />
+
+        <TextView
+            android:id="@+id/textView15"
+            style="@style/textstyle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_106"
+            android:text="20%"
+            app:layout_constraintEnd_toEndOf="@id/textView13"
+            app:layout_constraintTop_toBottomOf="@id/textView13" />
+
+        <TextView
+            android:id="@+id/textView16"
+            style="@style/textstyle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:text="منتظم"
+            android:textColor="@color/text02"
+            app:layout_constraintEnd_toStartOf="@id/textView15"
+            app:layout_constraintTop_toTopOf="@id/textView15" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView14"
+            android:background="@drawable/rectangle_108" />
+
+        <TextView
+            android:id="@+id/textView19"
+            style="@style/textstyle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="أعدل قراءة"
+            android:textColor="@color/color1"
+            app:layout_constraintEnd_toEndOf="@id/imageView15"
+            app:layout_constraintStart_toStartOf="@id/imageView15"
+            app:layout_constraintTop_toTopOf="@id/imageView15" />
+
+        <TextView
+            android:id="@+id/textView20"
+            style="@style/textStyleBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_110"
+            android:text="0.6"
+            app:layout_constraintEnd_toEndOf="@id/textView19"
+            app:layout_constraintStart_toStartOf="@id/textView19"
+            app:layout_constraintTop_toBottomOf="@id/textView19" />
+
+        <TextView
+            android:id="@+id/textView17"
+            style="@style/textstyle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أخفض قراءة"
+            android:textColor="@color/color5"
+            app:layout_constraintLeft_toRightOf="@id/textView19"
+            app:layout_constraintRight_toRightOf="@id/imageView15"
+            app:layout_constraintTop_toTopOf="@id/textView19" />
+
+        <TextView
+            android:id="@+id/textView18"
+            style="@style/textStyleBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_111"
+            android:text="0.6"
+            app:layout_constraintEnd_toEndOf="@id/textView17"
+            app:layout_constraintStart_toStartOf="@id/textView17"
+            app:layout_constraintTop_toBottomOf="@id/textView17" />
+
+        <TextView
+            android:id="@+id/textView21"
+            style="@style/textstyle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أحسن قراءة"
+            android:textColor="@color/color4"
+            app:layout_constraintLeft_toLeftOf="@id/imageView15"
+            app:layout_constraintRight_toLeftOf="@id/textView19"
+            app:layout_constraintTop_toTopOf="@id/textView19" />
+
+        <TextView
+            android:id="@+id/textView22"
+            style="@style/textStyleBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_109"
+            android:text="0.3"
+            app:layout_constraintEnd_toEndOf="@id/textView21"
+            app:layout_constraintStart_toStartOf="@id/textView21"
+            app:layout_constraintTop_toBottomOf="@id/textView21" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/imageView15"
+            app:layout_constraintLeft_toRightOf="@id/textView19"
+            app:layout_constraintRight_toLeftOf="@id/textView17"
+            app:layout_constraintTop_toTopOf="@id/imageView15"
+            android:background="@drawable/line_12" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/imageView15"
+            app:layout_constraintLeft_toRightOf="@id/textView21"
+            app:layout_constraintRight_toLeftOf="@id/textView19"
+            app:layout_constraintTop_toTopOf="@id/imageView15"
+            android:background="@drawable/line_12" />
+
+        <TextView
+            android:id="@+id/textView26"
+            style="@style/textstyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="منحنى السكر في الدم"
+            android:textColor="@color/text01"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            android:background="@drawable/line_11" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            android:background="@drawable/line_11" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView24"
+            app:layout_constraintTop_toBottomOf="@+id/imageView21"
+            android:background="@drawable/rectangle_131" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="الوجبات"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+            app:layout_constraintEnd_toEndOf="@+id/imageView23"
+            app:layout_constraintStart_toStartOf="@+id/imageView23"
+            app:layout_constraintTop_toTopOf="@+id/imageView23"
+            style="@style/inboxtextstyle" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/imageView23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView20"
+            android:background="@drawable/rectangle_132" />
+
+        <TextView
+            android:id="@+id/textView29"
+            style="@style/inboxtextstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="خلال ايام الاسبوع"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+            app:layout_constraintEnd_toEndOf="@+id/imageView24"
+            app:layout_constraintStart_toStartOf="@+id/imageView24"
+            app:layout_constraintTop_toTopOf="@+id/imageView24" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView24"
+            android:background="@drawable/rectangle_107" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_width="308dp"
+            android:layout_height="146dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView25"
+            app:layout_constraintTop_toTopOf="@+id/imageView25" />
+
+        <TextView
+            android:id="@+id/textView30"
+            style="@style/textstyle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_112"
+            android:text="استخراج التقرير"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

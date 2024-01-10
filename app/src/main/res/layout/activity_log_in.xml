@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_gradient_3"
+    tools:context=".LogInActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_blue" />
+
+    <EditText
+        android:id="@+id/emailLogIn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_shap"
+        android:drawableEnd="@drawable/envelope_solid"
+        android:drawablePadding="15dp"
+        android:drawableTint="@color/text01"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="البريد الإلكتروني"
+        android:inputType="textEmailAddress"
+        android:paddingRight="20dp"
+        android:textColor="@color/text03"
+        android:textColorHint="@color/text02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/passwordLogIn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_shap"
+        android:drawableEnd="@drawable/lock_solid"
+        android:drawablePadding="15dp"
+        android:drawableTint="@color/text01"
+        android:elevation="10dp"
+        android:ems="10"
+        android:gravity="center|end"
+        android:hint="كلمة السر"
+        android:inputType="textPassword"
+        android:paddingRight="20dp"
+        android:textColor="@color/text03"
+        android:textColorHint="@color/text02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLogIn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/tajawal_bold"
+        android:text="تسجيل الدخول"
+        android:textColor="@color/text01"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogIn" />
+
+
+    <TextView
+        android:id="@+id/passwordForgetBtnLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/tajawal_bold"
+        android:shadowColor="@color/colorshadow"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="15"
+        android:text="هل نسيت كلمة المرور؟"
+        android:textColor="@color/text01"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/registerBtnLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tajawal_bold"
+        android:text="التسجيل"
+        android:textColor="@color/text01"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordForgetBtnLogIn"
+        app:layout_constraintStart_toStartOf="@+id/passwordLogIn"
+        app:layout_constraintTop_toTopOf="@+id/passwordForgetBtnLogIn" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logInbtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/text01"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/passwordLogIn"
+        app:layout_constraintTop_toTopOf="@+id/textView2">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

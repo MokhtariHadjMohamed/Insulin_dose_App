@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="selected_height">89dp</dimen>
+    <dimen name="default_width">52dp</dimen>
+    <dimen name="default_height">89dp</dimen>
+
+    <dimen name="item_margin">10dp</dimen>
+</resources>

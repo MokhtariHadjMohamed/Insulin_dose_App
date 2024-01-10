@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp" /> <!-- Adjust the radius as needed -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/colorh4" />
+            <solid android:color="@android:color/white" /> <!-- Transparent background -->
+        </shape>
+    </item>
+    <item android:top="10dp" android:bottom="10dp" android:left="10dp" android:right="10dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/one" android:gravity="center"
+        android:width="25dp" android:height="50dp"
+        android:scaleType="fitXY"/>
+</layer-list>

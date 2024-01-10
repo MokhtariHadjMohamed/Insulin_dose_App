@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_gradient_3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".RegisterActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/registerbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/text01"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/phoneRegisterActivity"
+            app:layout_constraintTop_toTopOf="@+id/textView2">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/baseline_arrow_back_24" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:text="تسجيل"
+            android:textColor="@color/text01"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/phoneRegisterActivity"
+            app:layout_constraintTop_toBottomOf="@+id/phoneRegisterActivity" />
+
+        <TextView
+            android:id="@+id/logInRegisterActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:shadowColor="@color/colorshadow"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="15"
+            android:text="هل أنت مسجل من قبل؟"
+            android:textColor="@color/text01"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:text="معلومات التسجيل "
+            android:textColor="@color/text01"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:text="لمتابعة استخدام جرعة انسولين يرجى إدخال معلوماتك بشكل صحيح"
+            android:textAlignment="gravity"
+            android:textColor="@color/text02"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/person_pin" />
+
+        <EditText
+            android:id="@+id/nameRegisterActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edit_text_shap"
+            android:drawableEnd="@drawable/user_solid"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/color6"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="الإسم الكامل"
+            android:inputType="text"
+            android:textColor="@color/text03"
+            android:textColorHint="@color/text02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <EditText
+            android:id="@+id/emailRegisterActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edit_text_shap"
+            android:drawableEnd="@drawable/envelope_solid"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/color6"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="البريد الإلكتروني"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/text03"
+            android:textColorHint="@color/text02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameRegisterActivity" />
+
+        <EditText
+            android:id="@+id/passwordRegisterActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edit_text_shap"
+            android:drawableEnd="@drawable/lock_solid"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/color6"
+            android:elevation="10dp"
+            android:ems="10"
+            android:gravity="center|end"
+            android:hint="كلمة المرور"
+            android:inputType="textPassword"
+            android:textColor="@color/text03"
+            android:textColorHint="@color/text02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailRegisterActivity" />
+
+        <EditText
+            android:id="@+id/password2RegisterActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edit_text_shap"
+            android:drawableEnd="@drawable/lock_solid"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/color6"
+            android:elevation="10dp"
+            android:ems="10"
+            android:gravity="center|end"
+            android:hint="تأكيد كلمة المرور"
+            android:inputType="textPassword"
+            android:textColor="@color/text03"
+            android:textColorHint="@color/text02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordRegisterActivity" />
+
+        <EditText
+            android:id="@+id/phoneRegisterActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edit_text_shap"
+            android:drawableEnd="@drawable/baseline_call_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/color6"
+            android:elevation="10dp"
+            android:ems="10"
+            android:gravity="center|end"
+            android:hint="رقم هاتف"
+            android:inputType="phone"
+            android:textColor="@color/text03"
+            android:textColorHint="@color/text02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password2RegisterActivity" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

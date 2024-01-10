@@ -1,0 +1,33 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="40dp" />
+            <solid android:color="@color/white" />
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="1dp" />
+        </shape>
+    </item>
+    <!-- Shadow -->
+    <item
+        android:left="50dp"
+        android:right="10dp"
+        android:top="10dp"
+        >
+        <vector
+            android:width="149dp"
+            android:height="54dp"
+            android:viewportWidth="149"
+            android:viewportHeight="54">
+            <group>
+                <clip-path
+                    android:pathData="M27 0H122C136.912 0 149 12.0883 149 27C149 41.9117 136.912 54 122 54H27C12.0883 54 0 41.9117 0 27C0 12.0883 12.0883 0 27 0Z" />
+                <path
+                    android:pathData="M0 0V54H149V0" />
+            </group>
+        </vector>
+    </item>
+</layer-list>

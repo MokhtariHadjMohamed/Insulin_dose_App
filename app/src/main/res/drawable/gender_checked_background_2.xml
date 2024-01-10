@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorh4"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/tow_tow" android:gravity="center"
+        android:width="30dp" android:height="50dp"
+        android:scaleType="fitXY"/>
+</layer-list>
+

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_gradient_2"
+    android:elevation="15dp"
+    tools:context=".InfoActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info04"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewinfo04"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2info04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/info04" />
+
+        <TextView
+            android:id="@+id/textView2info04"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center|top"
+            android:letterSpacing="0.02"
+            android:text="تذكيرات وارشادات"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView3info04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewinfo04" />
+
+        <TextView
+            android:id="@+id/textView3info04"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/baseline_arrow_left_24"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="right|top"
+            android:letterSpacing="0.02"
+            android:text="التذكير بوقت قياس السكر."
+            android:textAlignment="textStart"
+            android:textColor="@color/text02"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4info04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2info04" />
+
+        <TextView
+            android:id="@+id/textView4info04"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/baseline_arrow_left_24"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="right|top"
+            android:letterSpacing="0.02"
+            android:text="الاشعار وقت أخذ جرعات الانسولين وأدوية أخرى."
+            android:textAlignment="textStart"
+            android:textColor="@color/text02"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView5info04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3info04" />
+
+        <TextView
+            android:id="@+id/textView5info04"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/baseline_arrow_left_24"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="right|top"
+            android:letterSpacing="0.02"
+            android:text="نصائح و تعليمات."
+            android:textAlignment="textStart"
+            android:textColor="@color/text02"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/startBtnInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4info04" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewinfo04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.81"
+            app:layout_constraintStart_toStartOf="@+id/imageViewinfo04"
+            app:layout_constraintTop_toTopOf="@+id/imageViewinfo04"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/info04_1" />
+
+        <Button
+            android:id="@+id/startBtnInfo"
+            android:layout_width="195dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/color1"
+            android:elevation="15dp"
+            android:fontFamily="@font/almarai_bold"
+            android:shadowColor="@color/colorshadow"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="15"
+            android:text="إبدأ الآن"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5info04" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info03"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewinfo03"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2info03"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/info03" />
+
+        <TextView
+            android:id="@+id/textView2info03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center|top"
+            android:letterSpacing="0.02"
+            android:text="رصد تطورات و تحليل بيانات "
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView3info03"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewinfo03" />
+
+        <TextView
+            android:id="@+id/textView3info03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:drawableEnd="@drawable/baseline_arrow_left_24"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="right|top"
+            android:letterSpacing="0.02"
+            android:text="تسجيل تفاصيل يومية، الاكل، الرياضة... الخ."
+            android:textAlignment="textStart"
+            android:textColor="@color/text02"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4info03"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2info03" />
+
+        <TextView
+            android:id="@+id/textView4info03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:drawableEnd="@drawable/baseline_arrow_left_24"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="right|top"
+            android:letterSpacing="0.02"
+            android:text="مراقبة تغير مستوى السكر مع مرور الوقت."
+            android:textAlignment="textStart"
+            android:textColor="@color/text02"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView5info03"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3info03" />
+
+        <TextView
+            android:id="@+id/textView5info03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:drawableEnd="@drawable/baseline_arrow_left_24"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="right|top"
+            android:letterSpacing="0.02"
+            android:text="تحليل شامل للبيانات."
+            android:textAlignment="textStart"
+            android:textColor="@color/text02"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4info03" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info02"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewinfo02"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2info02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/info2" />
+
+        <TextView
+            android:id="@+id/textView2info02"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:text="كيف يمكن أن يساعدك تطبيقنا؟"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView3info02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewinfo02" />
+
+        <TextView
+            android:id="@+id/textView3info02"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="center_horizontal|top"
+            android:letterSpacing="0.02"
+            android:text="تطبيق جرعة هو الحل نحو جعل تسجيل قراراتك حول مستوى السكر خطوة سهلة و بذلك قد خطوت الخطوة الأولى نحو السيطرة على السكر"
+            android:textAlignment="center"
+            android:textColor="@color/text02"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2info02" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info01"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewinfo01"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2info01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/info1" />
+
+        <TextView
+            android:id="@+id/textView2info01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center|top"
+            android:letterSpacing="0.02"
+            android:text="مرحبا بك في جرعة انسولين"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView3info01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewinfo01" />
+
+        <TextView
+            android:id="@+id/textView3info01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="center_horizontal|top"
+            android:letterSpacing="0.02"
+            android:text="يسعدنا أن نرحب بك في تجربة فريدة وفعالة لتتبع مستوى السكر في الدم. يهدف تطبيقنا إلى جعل عملية رعايتك الصحية أسهل وأكثر فعالية من خلال ميزاته المتقدمة والمستخدمة بسهولة."
+            android:textAlignment="center"
+            android:textColor="@color/text02"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2info01" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/beforBtnMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_arrow_back_ios_new_24" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextBtnMainActivity"
+        app:layout_constraintStart_toEndOf="@+id/beforBtnMainActivity">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/point01"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/text01"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/point02"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/point02"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/point03"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/point01"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/point03"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/point04"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/point02"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/point04"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/point03"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nextBtnMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_arrow_forward_ios_24" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "414369593786",
+    "project_id": "insolindos",
+    "storage_bucket": "insolindos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414369593786:android:1c35fb6e23a1edb2a7c583",
+        "android_client_info": {
+          "package_name": "com.example.insulin_dose_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyntMLa9lJA3zpUrkvFEH6G0GvopOSeGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
