@@ -3,11 +3,10 @@ package com.example.insulin_dose_app.RecViews
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.insulin_dose_app.Pills
+import com.example.insulin_dose_app.PillsAndInsulin
 import com.example.insulin_dose_app.R
-import com.example.insulin_dose_app.Treatment
 
-class RecycleViewAdapterTreatment(private val mList: List<Pills>) :
+class RecycleViewAdapterTreatment(private val mList: List<PillsAndInsulin>) :
     RecyclerView.Adapter<HolderTreatment>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderTreatment {
@@ -28,17 +27,17 @@ class RecycleViewAdapterTreatment(private val mList: List<Pills>) :
     }
 
     override fun onBindViewHolder(holder: HolderTreatment, position: Int) {
-        val pills: Pills = mList[position]
-        val amount = pills.cereal
-        val date = pills.date
-        val time = pills.time
+        val pillsAndInsulin: PillsAndInsulin = mList[position]
+        val amount = pillsAndInsulin.cereal
+        val date = pillsAndInsulin.date
+        val time = pillsAndInsulin.time
 
         // Adding spaces between different pieces of information
         holder.amount.text = "$amount حبة"
         holder.date.text = date
         holder.time.text = time
 
-        when (pills.type) {
+        when (pillsAndInsulin.type) {
             "Insulin" -> {
                 holder.image.setImageResource(R.drawable.ibraa)
             }
