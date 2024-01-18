@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(){
         )
 
         Handler(Looper.getMainLooper()).postDelayed({
-            if (auth.currentUser!!.uid != null){
+            if (auth.currentUser != null){
                 val intent = Intent(this, MedicinesPillsActivity::class.java)
                 startActivity(intent)
                 finish()
