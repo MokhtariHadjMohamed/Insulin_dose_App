@@ -13,6 +13,7 @@ class StartActivity : AppCompatActivity(), OnClickListener {
 
     lateinit var logIn: Button
     lateinit var register:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)

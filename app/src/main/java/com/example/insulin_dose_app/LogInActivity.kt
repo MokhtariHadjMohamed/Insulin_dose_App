@@ -43,7 +43,7 @@ class LogInActivity : AppCompatActivity(), OnClickListener {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
-                    startActivity(Intent(this@LogInActivity, StartActivity::class.java))
+                    startActivity(Intent(this@LogInActivity, HomeActivity::class.java))
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
