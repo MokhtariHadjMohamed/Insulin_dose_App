@@ -87,7 +87,8 @@ class PhoneAuthActivity : AppCompatActivity(),OnClickListener {
             .setPhoneNumber(phoneNumber) // Phone number to verify
             .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
             .setActivity(this) // Activity (for callback binding)
-            .setCallbacks(object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+            .setCallbacks(object : PhoneAuthProvider
+                .OnVerificationStateChangedCallbacks() {
 
                 override fun onCodeSent(
                     verificationId: String,
@@ -108,7 +109,7 @@ class PhoneAuthActivity : AppCompatActivity(),OnClickListener {
 
                 override fun onVerificationFailed(e: FirebaseException) {
                     // ...
-                    Toast.makeText(this@PhoneAuthActivity, e.message, Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, e.message.toString())
                 }
             }) // OnVerificationStateChangedCallbacks
             .build()

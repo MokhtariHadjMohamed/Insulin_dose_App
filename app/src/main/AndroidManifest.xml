@@ -33,7 +33,7 @@
             android:exported="true" />
         <activity
             android:name=".PhoneAuthActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".InfoPersonnelActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
