@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             if (auth.currentUser != null){
-                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, AccountActivity::class.java)
                 startActivity(intent)
                 finish()
             }else{
