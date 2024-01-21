@@ -25,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
                 1->setFragment(HomeFragment.newIntance())
                 2->setFragment(CalendarFragment.newInstance())
                 3->setFragment(ReportFragment.newIntance())
-                4->setFragment(profileFragment.newIntance())
+                4->setFragment(ProfileFragment.newIntance())
 
                 else->""
             }

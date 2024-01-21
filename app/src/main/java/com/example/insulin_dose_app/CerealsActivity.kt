@@ -25,8 +25,8 @@ class CerealsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener 
 
     // Calendar et formatters pour la gestion des dates et heures
     private val calendar = Calendar.getInstance()
-    private val dateFormatter = SimpleDateFormat("d,MMMM,yyyy", Locale("ar"))
-    private val timeFormatter = SimpleDateFormat("h:mm a", Locale("ar"))
+    private val dateFormatter = SimpleDateFormat("d,MMMM,yyyy", Locale("en"))
+    private val timeFormatter = SimpleDateFormat("h:mm a", Locale("en"))
 
     // Références aux éléments de l'interface utilisateur
     lateinit var date4: EditText
@@ -108,17 +108,22 @@ class CerealsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener 
             myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             myDialog.show()
 
+            // Get a reference to the TextView and set its text based on the time added
+            val textView45 = dialogBinding.findViewById<TextView>(R.id.textView45)
+            val timeText = time4.text.toString()
+            textView45.text = getFormattedTime(timeText)
+
             val canncelbtn1 = dialogBinding.findViewById<ImageView>(R.id.cancel1)
             canncelbtn1.setOnClickListener {
                 // Appeler la fonction pour ajouter les données de céréales à Firestore
                 addCerealDataToFirestore()
-
                 myDialog.dismiss()
             }
             // Bouton "ajout" dans le dialogue
             val btnmerci: TextView = dialogBinding.findViewById(R.id.merci1)
             btnmerci.setOnClickListener {
                 startActivity(Intent(this, MedicinesPillsActivity::class.java))
+                addCerealDataToFirestore()
                 myDialog.dismiss() // Dismiss the dialog after navigating to the new activity
             }
         }
@@ -131,7 +136,10 @@ class CerealsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener 
             time4.text.clear()
         }
     }
-
+    private fun getFormattedTime(timeText: String): String {
+        val time = SimpleDateFormat("HH:mm", Locale.getDefault()).parse(timeText)
+        return SimpleDateFormat("hh:mm a", Locale.getDefault()).format(time)
+    }
     // Gestion de la sélection de la date
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         Log.e("Calendar", "$year -- $month -- $dayOfMonth")

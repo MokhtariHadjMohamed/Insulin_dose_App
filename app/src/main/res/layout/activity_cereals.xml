@@ -113,7 +113,6 @@
 
     <EditText
         android:id="@+id/time4"
-        android:text="_"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -136,7 +135,6 @@
 
     <EditText
         android:id="@+id/date4"
-        android:text="_"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"

@@ -62,10 +62,9 @@ class RegisterActivity : AppCompatActivity(), OnClickListener {
         firestore.collection("Users").document(user.uid).set(user)
             .addOnSuccessListener {
                 Log.d(TAG, "DocumentSnapshot successfully written!")
+                opt(user.phone)
             }
             .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
-        opt(user.phone)
-
     }
 
     fun editTextTest(arr:Array<EditText>): Boolean {
