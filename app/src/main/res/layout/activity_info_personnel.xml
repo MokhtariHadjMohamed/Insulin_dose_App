@@ -1,46 +1,237 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoPersonnelActivity">
+    android:background="@color/colorh3">
 
+    <!-- Title TextViews -->
+
+    <TextView
+        android:id="@+id/info_personnel"
+        android:layout_width="335dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/tajawal_regular"
+        android:text="@string/info_personnel"
+        android:textAlignment="center"
+        android:textColorHint="@color/text01"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="186dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/almarai_bold"
+        android:text="@string/info"
+        android:textAlignment="center"
+        android:textColorHint="@color/text01"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/some_id6"
+        android:layout_width="62dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/almarai_bold"
+        android:text="@string/some_id6"
+        android:textAlignment="center"
+        android:textColorHint="@color/text01"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_personnel"
+        app:strokeWidth="1dp" />
+
+    <!-- TextInputLayouts inside CardViews -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="142dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="89dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="-10dp"
+            android:elevation="11dp"
+            android:padding="10dp"
+            android:src="@drawable/height" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:boxStrokeColor="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputLayout1_editText"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center|right"
+                android:hint="    الطول  " />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="142dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="35dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="46dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="-45dp"
+                android:padding="10dp"
+                android:src="@drawable/scales" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextWeight"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:gravity="center|right"
+                android:hint="    الوزن    "
+                android:textColorHint="@color/text01" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- RadioGroup -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@color/color1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="61dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="-1dp"
+            android:elevation="11dp"
+            android:padding="10dp"
+            android:src="@drawable/calendar" />
+
+        <EditText
+            android:id="@+id/editTextDate2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="date" />
+
+    </com.google.android.material.card.MaterialCardView>
     <RadioGroup
         android:id="@+id/genderRadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        android:checkedButton="@id/female"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/some_id6"
+        >
 
+        <RadioButton android:id="@+id/radio_male"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="25dp"
+            android:buttonTint="#00000000"
+            android:text=""
+            />
 
-    <RadioButton
-        android:id="@+id/male"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:button="@android:color/transparent"
-        android:background="@drawable/gender_background_selector_male"
-        android:drawableTop="@drawable/ic_male"
-        tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="175dp" />
-
-        <RadioButton
-            android:id="@+id/female"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:background="@drawable/gender_background_selector_female"
-            android:button="@android:color/transparent"
-            android:drawableTop="@drawable/ic_female"
-
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="175dp" />
-
+        <RadioButton android:id="@+id/radio_female"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="25dp"
+            android:buttonTint="#00000000"
+            android:text=""/>
     </RadioGroup>
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/information_personal_icon"
+        tools:ignore="MissingConstraints" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logInbtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/text01"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="3dp"
+            android:padding="10dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

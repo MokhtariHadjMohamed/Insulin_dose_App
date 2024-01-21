@@ -3,19 +3,16 @@ package com.example.insulin_dose_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Handler
 import android.os.Looper
-import android.view.View
-import android.view.View.OnClickListener
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.Toast
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
+    //Firebase
     val auth = Firebase.auth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +26,7 @@ class MainActivity : AppCompatActivity(){
 
         Handler(Looper.getMainLooper()).postDelayed({
             if (auth.currentUser != null){
-                val intent = Intent(this, MedicinesPillsActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
                 finish()
             }else{

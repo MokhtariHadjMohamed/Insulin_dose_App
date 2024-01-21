@@ -118,9 +118,8 @@ class Mesurer_la_glycemieActivity : AppCompatActivity(), DatePickerDialog.OnDate
     }
 
     private fun getUserId(): String {
-        /*val currentUser = FirebaseAuth.getInstance().currentUser
-   return currentUser?.uid ?: "" */
-        return "m0oXDIkgRvhl2zo1Hvtfuw8gSP72" // Replace this with your actual logic to get the user ID
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        return currentUser?.uid ?: ""
     }
 
     private fun showDialogo(sugarLevelValue: Int) {

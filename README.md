@@ -15,4 +15,3 @@ The purpose of SRS is to system determine both functional and non-functional req
 </ul>
 
 <h2>UI/UX</h2>
-[desgin جرعة انسولين_compressed.pdf](https://github.com/MokhtariHadjMohamed/Insulin-dose-App/files/13684534/desgin._compressed.pdf)

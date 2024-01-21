@@ -29,7 +29,6 @@
         android:fontFamily="@font/poppins"
         android:gravity="center_horizontal|top"
         android:lineHeight="38sp"
-        android:text="@string/some_id"
         android:textAppearance="@style/some_id"
         app:layout_constraintBottom_toTopOf="@+id/david_jones"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +45,6 @@
         android:fontFamily="@font/poppins"
         android:gravity="center_horizontal|top"
         android:lineHeight="30sp"
-        android:text="@string/david_jones"
         android:textAppearance="@style/david_jones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
@@ -70,12 +68,12 @@
     <TextView
         android:id="@+id/some_id3"
         android:layout_width="97dp"
-        android:layout_height="46dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/tajawal_medium"
         android:gravity="center|top"
         android:text="@string/some_id3"
         android:textAppearance="@style/some_id2"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
         app:layout_constraintStart_toStartOf="@+id/rectangle_3"
         app:layout_constraintTop_toTopOf="@+id/rectangle_3"
@@ -114,12 +112,12 @@
     <TextView
         android:id="@+id/some_id2"
         android:layout_width="97dp"
-        android:layout_height="46dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/tajawal_medium"
         android:gravity="center_horizontal|top"
         android:text="@string/some_id2"
         android:textAppearance="@style/some_id2"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
         app:layout_constraintStart_toStartOf="@+id/rectangle_2"
         app:layout_constraintTop_toTopOf="@+id/rectangle_2"
@@ -247,5 +245,59 @@
         app:layout_constraintTop_toTopOf="@+id/rectangle_11"
         app:layout_constraintVertical_bias="0.811"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="611dp" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="664dp" />
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintStart_toEndOf="@+id/rectangle_3"
+        app:layout_constraintTop_toBottomOf="@+id/some_id2" />
+
+    <TextView
+        android:id="@+id/textView69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+        app:layout_constraintTop_toBottomOf="@+id/some_id3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

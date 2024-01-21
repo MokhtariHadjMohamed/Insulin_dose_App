@@ -42,8 +42,6 @@ class PhoneAuthActivity : AppCompatActivity(),OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phone_auth)
 
-        auth.signOut()
-
         pinFromUser = findViewById(R.id.pinEnterPhoneAuth)
         pinFromUser.apply {
             setTextColor(R.color.text03)
@@ -64,10 +62,6 @@ class PhoneAuthActivity : AppCompatActivity(),OnClickListener {
 
         timer()
         sendVerificationCodeToUser(phoneNumber)
-    }
-
-    private fun upDateUser(uid:String){
-        firestore.collection("Users").document(uid).update("uid2", auth.currentUser!!.uid)
     }
 
     private fun timer(){
@@ -122,13 +116,12 @@ class PhoneAuthActivity : AppCompatActivity(),OnClickListener {
     }
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-        auth.signInWithCredential(credential)
+        auth.currentUser!!.linkWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
                     startActivity(Intent(this@PhoneAuthActivity, InfoPersonnelActivity::class.java))
-                    upDateUser(uid)
 
                     val user = task.result?.user
                 } else {

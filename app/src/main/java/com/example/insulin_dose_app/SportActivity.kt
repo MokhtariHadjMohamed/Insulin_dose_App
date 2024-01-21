@@ -26,8 +26,8 @@ class SportActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
 
     // Calendar et formatters pour la gestion des dates et heures
     private val calendar = Calendar.getInstance()
-    private val dateFormatter = SimpleDateFormat("d,MMMM,yyyy", Locale("ar"))
-    private val timeFormatter = SimpleDateFormat("HH:mma", Locale("ar"))
+    private val dateFormatter = SimpleDateFormat("d,MMMM,yyyy", Locale("en"))
+    private val timeFormatter = SimpleDateFormat("HH:mma", Locale("en"))
 
     // Références aux éléments de l'interface utilisateur
     private lateinit var sport: EditText

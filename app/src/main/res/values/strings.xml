@@ -2,8 +2,8 @@
     <string name="app_name">Insulin-dose-App</string>
     <string name="some_id">سامي عبد الله</string>
     <string name="david_jones">David jones@gmail.com</string>
-    <string name="some_id2">" الطول\n160"</string>
-    <string name="some_id3">الوزن\n70 كغ</string>
+    <string name="some_id2">" الطول"</string>
+    <string name="some_id3">الوزن</string>
     <string name="some_id4">المعلومات الشخصية</string>
     <string name="some_id5">تاريخ الميلاد:</string>
     <string name="some_id6">الجنس :</string>

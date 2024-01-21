@@ -2,9 +2,11 @@ package com.example.insulin_dose_app
 
 import android.app.ProgressDialog
 import android.content.ContentValues.TAG
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.insulin_dose_app.RecViews.RecycleViewAdapterTreatment
@@ -18,26 +20,32 @@ class MedicinesPillsActivity : AppCompatActivity() {
     lateinit var rec: RecyclerView
     lateinit var treatmentList: ArrayList<PillsAndInsulin>
     lateinit var adapter: RecycleViewAdapterTreatment
-    lateinit var progressDialog:ProgressDialog
+    lateinit var progressDialog: ProgressDialog
 
-    //firebase
+    // firebase
     val firestore = Firebase.firestore
     val auth = Firebase.auth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_medicines_pills)
 
         progressDialog = ProgressDialog(this@MedicinesPillsActivity)
 
+        // Retour à la page pharmaceutical
+        val ImageView19: ImageView = findViewById(R.id.imageView19)
+        ImageView19.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
         rec = findViewById(R.id.recyclerViewMedicinesPilles)
         rec.layoutManager = LinearLayoutManager(this)
         treatmentList = ArrayList()
         adapter = RecycleViewAdapterTreatment(treatmentList)
         getAllTreatment()
-
     }
 
-    private fun getAllTreatment(){
+    private fun getAllTreatment() {
         progressDialog.setTitle("تحميل قائمة الأدوية ")
         progressDialog.setMessage("تحميل...")
         progressDialog.show()
@@ -49,21 +57,22 @@ class MedicinesPillsActivity : AppCompatActivity() {
             .whereEqualTo("uid", auth.currentUser!!.uid)
             .get()
             .addOnSuccessListener { result ->
-            for (document in result) {
-                treatmentList.apply {
-                    add(PillsAndInsulin(
-                        Integer.parseInt(document.data["cereal"].toString()), document.data["date"].toString()
-                        , document.data["time"].toString(), document.data["uid"].toString(), "Pill"))
+                for (document in result) {
+                    treatmentList.apply {
+                        add(
+                            PillsAndInsulin(
+                                Integer.parseInt(document.data["cereal"].toString()), document.data["date"].toString(),
+                                document.data["time"].toString(), document.data["uid"].toString(), "Pill"
+                            )
+                        )
+                    }
                 }
-            }
-                adapter.notifyDataSetChanged()
+                getAllInsulin()  // Appeler la fonction suivante après avoir obtenu les Pills
             }
             .addOnFailureListener { exception ->
                 Log.d(TAG, "Error getting documents: ", exception)
                 progressDialog.dismiss()
             }
-        rec.adapter = adapter
-        getAllInsulin()
     }
 
     private fun getAllInsulin() {
@@ -71,13 +80,16 @@ class MedicinesPillsActivity : AppCompatActivity() {
             .whereEqualTo("uid", auth.currentUser!!.uid)
             .get()
             .addOnSuccessListener { result ->
-            for (document in result) {
-                treatmentList.apply {
-                    add(PillsAndInsulin(
-                        Integer.parseInt(document.data["insulin"].toString()), document.data["date"].toString()
-                        , document.data["time"].toString(), document.data["uid"].toString(), "Insulin"))
+                for (document in result) {
+                    treatmentList.apply {
+                        add(
+                            PillsAndInsulin(
+                                Integer.parseInt(document.data["insulin"].toString()), document.data["date"].toString(),
+                                document.data["time"].toString(), document.data["uid"].toString(), "Insulin"
+                            )
+                        )
+                    }
                 }
-            }
                 adapter.notifyDataSetChanged()
                 progressDialog.dismiss()
             }

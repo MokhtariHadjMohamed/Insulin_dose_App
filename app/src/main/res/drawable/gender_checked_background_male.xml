@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
- android:shape="oval">
-    <solid android:color="@color/colorh1"/>
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorh1"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/malew" android:gravity="center"
+        android:width="50dp" android:height="50dp"
+        android:scaleType="fitXY"/>
+</layer-list>
+

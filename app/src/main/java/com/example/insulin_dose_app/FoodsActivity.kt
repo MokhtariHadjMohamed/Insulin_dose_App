@@ -3,16 +3,14 @@ package com.example.insulin_dose_app
 import android.app.Dialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
-import android.view.View
+import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -24,12 +22,10 @@ import java.util.*
 
 class FoodsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
 
-    // Calendar et formatters pour la gestion des dates et heures
     private val calendar = Calendar.getInstance()
-    private val dateFormatter = SimpleDateFormat("d,MMMM,yyyy", Locale("ar"))
-    private val timeFormatter = SimpleDateFormat("HH:mma", Locale("ar"))
+    private val dateFormatter = SimpleDateFormat("d,MMMM,yyyy", Locale("en"))
+    private val timeFormatter = SimpleDateFormat("HH:mma", Locale("en"))
 
-    // Références aux éléments de l'interface utilisateur
     lateinit var food: EditText
     lateinit var date2: EditText
     lateinit var time2: EditText
@@ -38,54 +34,57 @@ class FoodsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
     private lateinit var lunchButton: TextView
     private lateinit var dinnerButton: TextView
 
-    // Firebase
+    private lateinit var back_btn: ImageView;
+
     private val firestore = FirebaseFirestore.getInstance()
     private val auth = FirebaseAuth.getInstance()
+
+    // Variable pour stocker le type de repas sélectionné
+    private var selectedMealType: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foods)
 
-        // Initialisation des références aux éléments de l'interface utilisateur
         food = findViewById(R.id.food)
         date2 = findViewById(R.id.date2)
         time2 = findViewById(R.id.time2)
 
-        // Bouton "Ajouter" et dialogue associé
         val add1 = findViewById<TextView>(R.id.add1)
         add1.setOnClickListener {
             showCustomDialog()
         }
 
-        // Choix de la date
         date2.setOnClickListener {
             showDatePicker()
         }
 
-        // Choix de l'heure
         time2.setOnClickListener {
             showTimePicker()
         }
 
-        // Boutons pour les repas
         breakfastButton = findViewById(R.id.textView13)
         lunchButton = findViewById(R.id.textView14)
         dinnerButton = findViewById(R.id.textView15)
 
-        breakfastButton.setOnClickListener { changeButtonColor(it as TextView) }
-        lunchButton.setOnClickListener { changeButtonColor(it as TextView) }
-        dinnerButton.setOnClickListener { changeButtonColor(it as TextView) }
+        breakfastButton.setOnClickListener { changeButtonColor(it as TextView, "الافطار") }
+        lunchButton.setOnClickListener { changeButtonColor(it as TextView, " الغداء") }
+        dinnerButton.setOnClickListener { changeButtonColor(it as TextView, "العشاء") }
 
-        // Bouton "Annuler"
         val button_cancel1: TextView = findViewById(R.id.cnnl1)
         button_cancel1.setOnClickListener {
             food.text.clear()
             date2.text.clear()
             time2.text.clear()
         }
+
+        back_btn = findViewById(R.id.back_btn)
+        back_btn.setOnClickListener{
+            startActivity(Intent(this@FoodsActivity, HomeActivity::class.java))
+            finish()
+        }
     }
 
-    // Affichage du dialogue personnalisé
     private fun showCustomDialog() {
         val dialogBinding = layoutInflater.inflate(R.layout.dialogue_add, null)
         val myDialog = Dialog(this)
@@ -94,7 +93,6 @@ class FoodsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
         myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         myDialog.show()
 
-        // Bouton "Oui" dans le dialogue
         val yesBtn = dialogBinding.findViewById<TextView>(R.id.merci)
         yesBtn.setOnClickListener {
             // Appeler la fonction pour ajouter les données alimentaires à Firestore
@@ -103,26 +101,17 @@ class FoodsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
             myDialog.dismiss()
         }
 
-        // Bouton "Annuler" dans le dialogue
         val cancelBtn = dialogBinding.findViewById<ImageView>(R.id.cancel)
         cancelBtn.setOnClickListener {
             myDialog.dismiss()
         }
-        findViewById<View>(R.id.imageView100).setOnClickListener {
-            // Create an Intent to start the new activity
-            val intent = Intent(this@FoodsActivity, HomeActivity::class.java)
-            startActivity(intent)
-        }
-
     }
 
-    // Gestion du choix de la date
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         calendar.set(year, month, dayOfMonth)
         displayFormattedDate(calendar.timeInMillis)
     }
 
-    // Affichage du sélecteur de date
     private fun showDatePicker() {
         DatePickerDialog(
             this,
@@ -133,7 +122,6 @@ class FoodsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
         ).show()
     }
 
-    // Affichage du sélecteur d'heure
     private fun showTimePicker() {
         val cal = Calendar.getInstance()
         val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
@@ -150,13 +138,11 @@ class FoodsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
         ).show()
     }
 
-    // Affichage de la date formatée dans l'EditText
     private fun displayFormattedDate(timestamp: Long) {
         val date = Date(timestamp)
         date2.setText(dateFormatter.format(date))
     }
 
-    // Fonction pour ajouter les données alimentaires à Firestore
     private fun addFoodDataToFirestore() {
         val foodText = food.text.toString()
         val dateText = date2.text.toString()
@@ -165,25 +151,29 @@ class FoodsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
         val user = auth.currentUser
         val uid = user?.uid
 
-        val foodData = hashMapOf(
-            "food" to foodText,
-            "date" to dateText,
-            "time" to timeText,
-            "uid" to uid
-        )
+        if (selectedMealType != null) {
+            val foodData = hashMapOf(
+                "food" to foodText,
+                "date" to dateText,
+                "time" to timeText,
+                "uid" to uid,
+                "mealType" to selectedMealType
+            )
 
-        firestore.collection("Meals")
-            .add(foodData)
-            .addOnSuccessListener { documentReference ->
-                Log.d(TAG, "Food data added with ID: ${documentReference.id}")
-            }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Error adding food data", e)
-            }
+            firestore.collection("Meals")
+                .add(foodData)
+                .addOnSuccessListener { documentReference ->
+                    Log.d(TAG, "Food data added with ID: ${documentReference.id}")
+                }
+                .addOnFailureListener { e ->
+                    Log.w(TAG, "Error adding food data", e)
+                }
+        } else {
+            Log.e(TAG, "Meal type not selected")
+        }
     }
 
-    // Changement de couleur des boutons de repas
-    private fun changeButtonColor(button: TextView) {
+    private fun changeButtonColor(button: TextView, mealType: String) {
         val selectedBackground = ContextCompat.getDrawable(this, R.drawable.rectangle_8)
         val defaultBackground = ContextCompat.getDrawable(this, R.drawable.rectangle_9)
 
@@ -207,12 +197,13 @@ class FoodsActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
                 resetClickListeners(breakfastButton, lunchButton)
             }
         }
+
+        selectedMealType = mealType
     }
 
-    // Réinitialisation des écouteurs de clic
     private fun resetClickListeners(vararg buttons: TextView) {
         buttons.forEach { button ->
-            button.setOnClickListener { changeButtonColor(button) }
+            button.setOnClickListener { changeButtonColor(button, "") }
         }
     }
 
