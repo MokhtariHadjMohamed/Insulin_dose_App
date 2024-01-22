@@ -58,24 +58,17 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
-        android:layout_width="142dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toStartOf="@+id/cardView3"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="89dp"
-            android:layout_height="74dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="-10dp"
-            android:elevation="11dp"
-            android:padding="10dp"
-            android:src="@drawable/height" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout1"
@@ -86,9 +79,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputLayout1_editText"
-                android:layout_width="140dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/white"
+                android:drawableEnd="@drawable/height"
                 android:gravity="center|right"
                 android:hint="    الطول  " />
 
@@ -97,13 +91,16 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
-        android:layout_width="142dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
-        android:layout_marginRight="35dp"
+        android:layout_marginEnd="24dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView4"
         app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -111,23 +108,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="46dp"
-                android:layout_height="49dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="-45dp"
-                android:padding="10dp"
-                android:src="@drawable/scales" />
-
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputEditTextWeight"
-                android:layout_width="140dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="20dp"
                 android:background="@color/white"
+                android:drawableEnd="@drawable/scales"
                 android:gravity="center|right"
-                android:hint="    الوزن    "
+                android:hint="الوزن"
                 android:textColorHint="@color/text01" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
@@ -147,27 +135,20 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView4"
         tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="61dp"
-            android:layout_height="52dp"
-            android:layout_marginLeft="240dp"
-            android:layout_marginTop="-1dp"
-            android:elevation="11dp"
-            android:padding="10dp"
-            android:src="@drawable/calendar" />
-
         <EditText
             android:id="@+id/editTextDate2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:padding="10dp"
             android:background="@android:color/white"
+            android:drawableEnd="@drawable/calendar"
             android:ems="10"
-            android:gravity="right"
+            android:gravity="center|right"
             android:inputType="date" />
 
     </com.google.android.material.card.MaterialCardView>
+
     <RadioGroup
         android:id="@+id/genderRadioGroup"
         android:layout_width="242dp"
@@ -177,23 +158,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_id6"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/some_id6">
 
-        <RadioButton android:id="@+id/radio_male"
+        <RadioButton
+            android:id="@+id/radio_male"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_margin="25dp"
             android:buttonTint="#00000000"
-            android:text=""
-            />
+            android:text="" />
 
-        <RadioButton android:id="@+id/radio_female"
+        <RadioButton
+            android:id="@+id/radio_female"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_margin="25dp"
             android:buttonTint="#00000000"
-            android:text=""/>
+            android:text="" />
     </RadioGroup>
 
     <ImageView

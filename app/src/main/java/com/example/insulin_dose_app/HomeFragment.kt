@@ -1,3 +1,4 @@
+package com.example.insulin_dose_app
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
@@ -17,6 +18,7 @@ import com.example.insulin_dose_app.Mesurer_la_glycemieActivity
 import com.example.insulin_dose_app.R
 import com.example.insulin_dose_app.SettingsActivity
 import com.example.insulin_dose_app.SportActivity
+import com.example.insulin_dose_app.StartActivity
 import com.example.insulin_dose_app.pharmaceuticalActivity
 
 class HomeFragment : Fragment() {
@@ -129,11 +131,37 @@ class HomeFragment : Fragment() {
             myDialogLogout.setContentView(dialogBindingLogout)
             myDialogLogout.setCancelable(true)
             myDialogLogout.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+            // Find the "Yes" and "No" buttons in your logout dialog layout
+            val yesButton = dialogBindingLogout.findViewById<TextView>(R.id.textView41)
+            val noButton = dialogBindingLogout.findViewById<TextView>(R.id.textView47)
+
+            // Set click listeners for "Yes" and "No" buttons
+            yesButton.setOnClickListener {
+                // Implement logout logic here
+                // For example, you can call a function to log the user out
+                // logoutUser()
+
+                // Start the StartActivity after logging out
+                val intent = Intent(activity, StartActivity::class.java)
+                startActivity(intent)
+
+                // Close the current activity or fragment if needed
+                requireActivity().finish()
+
+                myDialogLogout.dismiss() // Dismiss the logout dialog after logging out
+            }
+
+            noButton.setOnClickListener {
+                myDialogLogout.dismiss() // Dismiss the logout dialog without logging out
+            }
+
             myDialogLogout.show() // Show the logout dialog
             myDialog.dismiss() // Dismiss the main dialog after navigating to logout dialog
         }
 
         myDialog.show()
+
     }
 
     // Other methods and logic for the fragment can be added here

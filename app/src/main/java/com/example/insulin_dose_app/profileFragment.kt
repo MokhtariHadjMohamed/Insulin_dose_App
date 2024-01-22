@@ -93,7 +93,7 @@ class ProfileFragment : Fragment() {
                         )
 
                         this.full_name.text = user.full_name
-                        this.email.text = user.full_name
+                        this.email.text = user.email
                         this.dateOfBirth.text = user.dateOfBirth
                         this.gender.text = user.gender
                         this.height.text = user.height.toString()
