@@ -86,20 +86,20 @@ class ProfileFragment : Fragment() {
                             phone,
                             dateOfBirth,
                             gender,
-                            parseInt(height),
-                            parseInt(weight),
+                            height,
+                            weight,
                             dateOfDiagnosis,
                             diabet
                         )
 
-//                        this.full_name.text = user.full_name
-//                        this.email.text = user.full_name
-//                        this.dateOfBirth.text = user.
-//                        this.gender.text = user.full_name
-//                        this.height.text = user.full_name
-//                        this.weight.text = user.full_name
-//                        this.diabet.text = user.full_name
-//                        this.dateOfDiagnosis.text =
+                        this.full_name.text = user.full_name
+                        this.email.text = user.full_name
+                        this.dateOfBirth.text = user.dateOfBirth
+                        this.gender.text = user.gender
+                        this.height.text = user.height.toString()
+                        this.weight.text = user.weight.toString()
+                        this.diabet.text = user.diabet
+                        this.dateOfDiagnosis.text = user.dateOfDiagnosis
 
                         // Do something with the user object if needed
                         Log.d(TAG, "DocumentSnapshot data: $fullName")

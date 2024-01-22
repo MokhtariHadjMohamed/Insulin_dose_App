@@ -41,7 +41,6 @@ class RegisterActivity : AppCompatActivity(), OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Sign in...")
 
@@ -59,7 +58,7 @@ class RegisterActivity : AppCompatActivity(), OnClickListener {
     }
 
     private fun addUserToFirestor(user:User){
-        firestore.collection("Users").document(user.uid).set(user)
+        firestore.collection("Users").document(user.uid.toString()).set(user)
             .addOnSuccessListener {
                 Log.d(TAG, "DocumentSnapshot successfully written!")
                 opt(user.phone)
@@ -78,7 +77,7 @@ class RegisterActivity : AppCompatActivity(), OnClickListener {
         return true
     }
 
-    fun opt(phone:Int){
+    fun opt(phone:Int?){
         val intent = Intent(this, PhoneAuthActivity::class.java)
         intent.putExtra("Phone", "+" + "213" + phone)
         startActivity(intent)

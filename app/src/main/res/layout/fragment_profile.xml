@@ -1,303 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/unsplash_xh"
-        android:layout_width="96dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginEnd="149dp"
-        android:layout_marginBottom="9dp"
-        app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/some_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/some_id"
-        android:layout_width="196dp"
-        android:layout_height="39dp"
-        android:fontFamily="@font/poppins"
-        android:gravity="center_horizontal|top"
-        android:lineHeight="38sp"
-        android:textAppearance="@style/some_id"
-        app:layout_constraintBottom_toTopOf="@+id/david_jones"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/unsplash_xh"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/david_jones"
-        android:layout_width="252dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/poppins"
-        android:gravity="center_horizontal|top"
-        android:lineHeight="30sp"
-        android:textAppearance="@style/david_jones"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_id"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:id="@+id/rectangle_3"
-        android:layout_width="136dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/rectangle_2"
-        app:layout_constraintEnd_toStartOf="@+id/rectangle_2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/david_jones"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/some_id3"
-        android:layout_width="97dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/tajawal_medium"
-        android:gravity="center|top"
-        android:text="@string/some_id3"
-        android:textAppearance="@style/some_id2"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_3"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_3"
-        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-    <View
-        android:id="@+id/rectangle_2"
-        android:layout_width="136dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginBottom="11dp"
-        android:background="@drawable/rectangle_2"
-        app:layout_constraintBottom_toTopOf="@+id/some_id4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rectangle_3"
-        app:layout_constraintTop_toBottomOf="@+id/david_jones"
-        app:layout_constraintVertical_bias="0.6"
-        tools:ignore="MissingConstraints" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/unsplash_xh"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="90dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/some_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/ellipse_14"
-        android:layout_width="40.09dp"
-        android:layout_height="30.3dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/ellipse_14"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_3"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_3"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/some_id"
+            android:layout_width="196dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_horizontal|top"
+            android:lineHeight="38sp"
+            android:text="text"
+            android:textAppearance="@style/some_id"
+            app:layout_constraintBottom_toTopOf="@+id/david_jones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unsplash_xh"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/some_id2"
-        android:layout_width="97dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/tajawal_medium"
-        android:gravity="center_horizontal|top"
-        android:text="@string/some_id2"
-        android:textAppearance="@style/some_id2"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_2"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/david_jones"
+            android:layout_width="252dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_horizontal|top"
+            android:lineHeight="30sp"
+            android:text="text"
+            android:textAppearance="@style/david_jones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/some_id"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/some_id4"
-        android:layout_width="278dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginEnd="42dp"
-        android:fontFamily="@font/tajawal_bold"
-        android:gravity="right|top"
-        android:text="@string/some_id4"
-        android:textAppearance="@style/some_id4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_3"
-        tools:ignore="MissingConstraints" />
+        <View
+            android:id="@+id/rectangle_3"
+            android:layout_width="136dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/rectangle_2"
+            app:layout_constraintEnd_toStartOf="@+id/rectangle_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/david_jones"
+            tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/rectangle_1"
-        android:layout_width="375dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="29dp"
-        android:background="@drawable/rectangle_1"
-        android:elevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_id4"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/some_id3"
+            android:layout_width="97dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/tajawal_medium"
+            android:gravity="center|top"
+            android:text="@string/some_id3"
+            android:textAppearance="@style/some_id2"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_3"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/some_id5"
-        android:layout_width="177dp"
-        android:layout_height="31dp"
-        android:fontFamily="@font/tajawal_bold"
-        android:gravity="top"
-        android:text="@string/some_id5"
-        android:textAppearance="@style/some_id3"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
-        app:layout_constraintHorizontal_bias="0.935"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
-        app:layout_constraintVertical_bias="0.2"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/some_id6"
-        android:layout_width="177dp"
-        android:layout_height="31dp"
-        android:fontFamily="@font/tajawal_bold"
-        android:gravity="top"
-        android:text="@string/some_id6"
-        android:textAppearance="@style/some_id3"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
-        app:layout_constraintHorizontal_bias="0.935"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
-        app:layout_constraintVertical_bias="0.777"
-        tools:ignore="MissingConstraints" />
+        <View
+            android:id="@+id/rectangle_2"
+            android:layout_width="136dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/rectangle_2"
+            app:layout_constraintBottom_toTopOf="@+id/some_id4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rectangle_3"
+            app:layout_constraintTop_toBottomOf="@+id/david_jones"
+            app:layout_constraintVertical_bias="0.6"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/some_id7"
-        android:layout_width="200dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="44dp"
-        android:fontFamily="@font/tajawal_bold"
-        android:gravity="right|top"
-        android:text="@string/some_id7"
-        android:textAppearance="@style/some_id4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
-        tools:ignore="MissingConstraints" />
+        <View
+            android:id="@+id/ellipse_14"
+            android:layout_width="40.09dp"
+            android:layout_height="30.3dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/ellipse_14"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_3"
+            tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/rectangle_11"
-        android:layout_width="376dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="29dp"
-        android:background="@drawable/rectangle_1"
-        android:elevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/some_id7"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/some_id2"
+            android:layout_width="97dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/tajawal_medium"
+            android:gravity="center_horizontal|top"
+            android:text="@string/some_id2"
+            android:textAppearance="@style/some_id2"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_2"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/some_id8"
-        android:layout_width="177dp"
-        android:layout_height="31dp"
-        android:fontFamily="@font/tajawal_bold"
-        android:gravity="top"
-        android:text="@string/some_id8"
-        android:textAppearance="@style/some_id3"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_11"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_11"
-        app:layout_constraintHorizontal_bias="0.935"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_11"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_11"
-        app:layout_constraintVertical_bias="0.233"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/some_id4"
+            android:layout_width="278dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="85dp"
+            android:layout_marginEnd="42dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="right|top"
+            android:text="@string/some_id4"
+            android:textAppearance="@style/some_id4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_3"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/some_id9"
-        android:layout_width="177dp"
-        android:layout_height="31dp"
-        android:fontFamily="@font/tajawal_bold"
-        android:gravity="top"
-        android:text="@string/some_id9"
-        android:textAppearance="@style/some_id3"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_11"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_11"
-        app:layout_constraintHorizontal_bias="0.935"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_11"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_11"
-        app:layout_constraintVertical_bias="0.811"
-        tools:ignore="MissingConstraints" />
+        <View
+            android:id="@+id/rectangle_1"
+            android:layout_width="375dp"
+            android:layout_height="121dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="29dp"
+            android:background="@drawable/rectangle_1"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/some_id4"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="439dp" />
+        <TextView
+            android:id="@+id/some_id5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="top"
+            android:text="@string/some_id5"
+            android:textAppearance="@style/some_id3"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+            app:layout_constraintVertical_bias="0.2"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="497dp" />
+        <TextView
+            android:id="@+id/some_id6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="top"
+            android:text="@string/some_id6"
+            android:textAppearance="@style/some_id3"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+            app:layout_constraintVertical_bias="0.777"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView48"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="611dp" />
+        <TextView
+            android:id="@+id/some_id7"
+            android:layout_width="200dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="44dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="right|top"
+            android:text="@string/some_id7"
+            android:textAppearance="@style/some_id4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.928"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView67"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="188dp"
-        tools:layout_editor_absoluteY="664dp" />
+        <View
+            android:id="@+id/rectangle_11"
+            android:layout_width="376dp"
+            android:layout_height="123dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="29dp"
+            android:background="@drawable/rectangle_1"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/some_id7"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView68"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
-        app:layout_constraintStart_toEndOf="@+id/rectangle_3"
-        app:layout_constraintTop_toBottomOf="@+id/some_id2" />
+        <TextView
+            android:id="@+id/some_id8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="top"
+            android:text="@string/some_id8"
+            android:textAppearance="@style/some_id3"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_11"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_11"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_11"
+            app:layout_constraintVertical_bias="0.233"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView69"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_3"
-        app:layout_constraintTop_toBottomOf="@+id/some_id3" />
+        <TextView
+            android:id="@+id/some_id9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="top"
+            android:text="@string/some_id9"
+            android:textAppearance="@style/some_id3"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_11"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_11"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_11"
+            app:layout_constraintVertical_bias="0.811"
+            tools:ignore="MissingConstraints" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/almarai_regular"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/some_id5"
+            app:layout_constraintEnd_toStartOf="@+id/some_id5"
+            app:layout_constraintTop_toTopOf="@+id/some_id5" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/almarai_regular"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/some_id6"
+            app:layout_constraintEnd_toStartOf="@+id/some_id6"
+            app:layout_constraintTop_toTopOf="@+id/some_id6" />
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/almarai_regular"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/some_id8"
+            app:layout_constraintEnd_toStartOf="@+id/some_id8"
+            app:layout_constraintTop_toTopOf="@+id/some_id8" />
+
+        <TextView
+            android:id="@+id/textView67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/almarai_regular"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/some_id9"
+            app:layout_constraintEnd_toStartOf="@+id/some_id9"
+            app:layout_constraintTop_toTopOf="@+id/some_id9" />
+
+        <TextView
+            android:id="@+id/textView68"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+            app:layout_constraintStart_toEndOf="@+id/rectangle_3"
+            app:layout_constraintTop_toBottomOf="@+id/some_id2" />
+
+        <TextView
+            android:id="@+id/textView69"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+            app:layout_constraintTop_toBottomOf="@+id/some_id3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

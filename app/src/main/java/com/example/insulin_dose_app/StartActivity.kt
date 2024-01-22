@@ -28,10 +28,10 @@ class StartActivity : AppCompatActivity(), OnClickListener {
     override fun onClick(v: View?) {
         when(v){
             logIn -> {
-                startActivity(Intent(this, LogInActivity::class.java))
+                startActivity(Intent(this, RegisterActivity::class.java))
             }
             register -> {
-                startActivity(Intent(this, RegisterActivity::class.java))
+                startActivity(Intent(this, LogInActivity::class.java))
             }
         }
     }
