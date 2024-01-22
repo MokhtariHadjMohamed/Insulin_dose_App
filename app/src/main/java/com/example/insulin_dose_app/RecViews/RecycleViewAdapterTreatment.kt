@@ -6,8 +6,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.insulin_dose_app.PillsAndInsulin
 import com.example.insulin_dose_app.R
 
-class RecycleViewAdapterTreatment(private val mList: List<PillsAndInsulin>) :
-    RecyclerView.Adapter<HolderTreatment>() {
+// Add a listener interface
+interface OnItemClickListener {
+    fun onItemClick(position: Int)
+}
+
+class RecycleViewAdapterTreatment(
+    private val mList: List<PillsAndInsulin>,
+    private val clickListener: OnItemClickListener
+) : RecyclerView.Adapter<HolderTreatment>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderTreatment {
         // Inflate the layout
@@ -44,9 +51,14 @@ class RecycleViewAdapterTreatment(private val mList: List<PillsAndInsulin>) :
             "Pill" -> {
                 holder.image.setImageResource(R.drawable.adwiya)
             }
-            else ->{
+            else -> {
                 holder.image.setImageResource(R.drawable.adwiya)
             }
+        }
+
+        // Set click listener
+        holder.imageViewdelete.setOnClickListener {
+            clickListener.onItemClick(position)
         }
     }
 }
