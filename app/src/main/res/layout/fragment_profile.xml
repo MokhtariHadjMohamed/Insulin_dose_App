@@ -42,7 +42,7 @@
         <TextView
             android:id="@+id/david_jones"
             android:layout_width="252dp"
-            android:layout_height="23dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins"
             android:gravity="center_horizontal|top"
@@ -104,7 +104,7 @@
             android:layout_height="30.3dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="45dp"
             android:background="@drawable/ellipse_14"
             app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
             app:layout_constraintEnd_toEndOf="@+id/rectangle_2"

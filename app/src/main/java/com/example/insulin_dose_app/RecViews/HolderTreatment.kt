@@ -12,4 +12,5 @@ class HolderTreatment(itemView : View): RecyclerView.ViewHolder(itemView) {
     val date:TextView = itemView.findViewById(R.id.dateItemMedicines)
     val image:ImageView = itemView.findViewById(R.id.imageViewItemMedicines)
     val amount:TextView = itemView.findViewById(R.id.amountItemMedicines)
+    val imageViewdelete:ImageView = itemView.findViewById(R.id.imageView23)
 }
