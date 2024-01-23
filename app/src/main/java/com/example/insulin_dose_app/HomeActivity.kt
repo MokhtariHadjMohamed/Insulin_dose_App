@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
         navigation.setOnClickMenuListener {
             when(it.id){
                 1->setFragment(HomeFragment.newIntance())
-                2->setFragment(CalendarFragment.newInstance())
+                2->setFragment(CalendarFragment.newIntance())
                 3->setFragment(ReportFragment.newIntance())
                 4->setFragment(ProfileFragment.newIntance())
 
